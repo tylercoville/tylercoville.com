@@ -3,22 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tyler Coville</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <title>{% if title and title != "Tyler Coville" %}{{ title }} — Tyler Coville{% else %}Tyler Coville{% endif %}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-  <div class="container">
-    <img src="assets/images/headshot.jpg" alt="Tyler Coville Headshot" class="headshot">
-    <h1>Tyler Coville</h1>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/tylercoville/" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/tylercoville" target="_blank">GitHub</a>
-    </div>
-  </div>
+  <header class="site-header">
+    <a href="/" class="site-title">Tyler Coville</a>
+    <nav class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <span class="site-copyright">Tyler Coville &copy; {{ site.year }}</span>
+    <nav class="site-footer-links">
+      <a href="https://www.linkedin.com/in/tylercoville/">LinkedIn</a>
+      <a href="https://github.com/tylercoville">GitHub</a>
+      <a href="mailto:tyler@tylercoville.com">Email</a>
+    </nav>
+  </footer>
   <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "476c536cefaf44748a8906283d639772"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
-
