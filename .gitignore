@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+_site/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env / secrets
+.env
+.env.*
+*.pem
+
+# Caches
+.cache/
+.eleventy-cache/
+.npm/
